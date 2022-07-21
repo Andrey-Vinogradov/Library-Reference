@@ -1,11 +1,11 @@
 package ReferenceLibrary.model;
 
-public class Autor {
+public class Author {
     private String name;
     private String surname;
     private int yearofbirth;
 
-    public Autor(String name, String surname, int yearofbirth) {
+    public Author(String name, String surname, int yearofbirth) {
         this.name = name;
         this.surname = surname;
         this.yearofbirth = yearofbirth;
@@ -36,7 +36,7 @@ public class Autor {
     }
 
     public String getFullName(){
-        return Autor.this.name + " " + Autor.this.surname;
+        return Author.this.name + " " + Author.this.surname;
     }
 
 }

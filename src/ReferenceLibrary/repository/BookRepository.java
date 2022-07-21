@@ -7,7 +7,7 @@ public class BookRepository {
 
     public Book[] books = { new Book("Alice in Wonderland","fantasy", 1865),
                             new Book("Dracula", "horror",1987),
-                            new Book("The Little Prince","fantasy",1943 )};
+                            new Book("The Little Prince","fantasy",1900 )};
 
     public Book[] getBooks() {
         return books;
