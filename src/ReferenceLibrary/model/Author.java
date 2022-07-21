@@ -36,7 +36,7 @@ public class Author {
     }
 
     public String getFullName(){
-        return Author.this.name + " " + Author.this.surname;
+        return name + " " + surname;
     }
 
 }

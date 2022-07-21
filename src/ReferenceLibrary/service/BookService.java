@@ -1,8 +1,7 @@
-package ReferenceLibrary.Service;
+package ReferenceLibrary.service;
 
 import ReferenceLibrary.model.Author;
 import ReferenceLibrary.model.Book;
-import ReferenceLibrary.repository.AuthorRepository;
 import ReferenceLibrary.repository.BookRepository;
 
 import java.util.Arrays;
@@ -25,8 +24,7 @@ public class BookService {
     }
     public void addAuthorByBookName(String bookName, Author author){
         Book book = getByBookName(bookName);
-        //Author author =
-        Book.setAuthor(author);
+        book.setAuthor(author);
     }
     public void create(String name, String genre, int yearRelease){
         Book newBook = new Book(name, genre, yearRelease);

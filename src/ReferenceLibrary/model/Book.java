@@ -5,6 +5,9 @@ public class Book {
     private String genre;
     private int yearRelease;
 
+
+    private Author author;
+
     public Book(String name, String genre, int yearRelease) {
         this.name = name;
         this.genre = genre;
@@ -35,5 +38,11 @@ public class Book {
         this.yearRelease = yearRelease;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
 
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
 }
