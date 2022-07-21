@@ -2,9 +2,8 @@ package ReferenceLibrary.repository;
 
 import ReferenceLibrary.model.Author;
 
-public class AuthorRepository {
 
-    public class AuthorRepostory {
+    public class AuthorRepository {
 
         public Author[] authors ={ new Author( "Lewis", "Carroll", 1832 ),
                                  new Author( "Bram", "Stoker", 1847 ),
@@ -18,4 +17,4 @@ public class AuthorRepository {
             this.authors = authors;
         }
     }
-}
+

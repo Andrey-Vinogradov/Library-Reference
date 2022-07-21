@@ -2,7 +2,10 @@ package ReferenceLibrary.Service;
 
 import ReferenceLibrary.model.Author;
 import ReferenceLibrary.model.Book;
+import ReferenceLibrary.repository.AuthorRepository;
 import ReferenceLibrary.repository.BookRepository;
+
+import java.util.Arrays;
 
 public class BookService {
 
@@ -22,8 +25,14 @@ public class BookService {
     }
     public void addAuthorByBookName(String bookName, Author author){
         Book book = getByBookName(bookName);
-        Author author =
-        //book.setAuthor(author);
+        //Author author =
+        Book.setAuthor(author);
+    }
+    public void create(String name, String genre, int yearRelease){
+        Book newBook = new Book(name, genre, yearRelease);
+        Book[] newBooks = Arrays.copyOf(bookRepository.getBooks(), bookRepository.getBooks().length +1);
+        newBooks[newBooks.length] = newBook;
+        bookRepository.setBooks(newBooks);
     }
 }
 

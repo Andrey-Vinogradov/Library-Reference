@@ -3,12 +3,12 @@ package ReferenceLibrary.model;
 public class Book {
     private String name;
     private String genre;
-    private int yearrelease;
+    private int yearRelease;
 
-    public Book(String name, String genre, int yearrelease) {
+    public Book(String name, String genre, int yearRelease) {
         this.name = name;
         this.genre = genre;
-        this.yearrelease = yearrelease;
+        this.yearRelease = yearRelease;
     }
 
     public String getName() {
@@ -27,12 +27,12 @@ public class Book {
         this.genre = genre;
     }
 
-    public int getYearrelease() {
-        return yearrelease;
+    public int getYearRelease() {
+        return yearRelease;
     }
 
-    public void setYearrelease(int yearrelease) {
-        this.yearrelease = yearrelease;
+    public void setYearRelease(int yearRelease) {
+        this.yearRelease = yearRelease;
     }
 
 

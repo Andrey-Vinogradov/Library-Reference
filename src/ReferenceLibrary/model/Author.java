@@ -3,12 +3,12 @@ package ReferenceLibrary.model;
 public class Author {
     private String name;
     private String surname;
-    private int yearofbirth;
+    private int yearOfBirth;
 
-    public Author(String name, String surname, int yearofbirth) {
+    public Author(String name, String surname, int yearOfBirth) {
         this.name = name;
         this.surname = surname;
-        this.yearofbirth = yearofbirth;
+        this.yearOfBirth = yearOfBirth;
     }
 
     public String getName() {
@@ -27,12 +27,12 @@ public class Author {
         this.surname = surname;
     }
 
-    public int getYearofbirth() {
-        return yearofbirth;
+    public int getYearOfBirth() {
+        return yearOfBirth;
     }
 
-    public void setYearofbirth(int yearofbirth) {
-        this.yearofbirth = yearofbirth;
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
     }
 
     public String getFullName(){
