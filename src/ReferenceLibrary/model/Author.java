@@ -39,4 +39,12 @@ public class Author {
         return name + " " + surname;
     }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", yearOfBirth=" + yearOfBirth +
+                '}';
+    }
 }
