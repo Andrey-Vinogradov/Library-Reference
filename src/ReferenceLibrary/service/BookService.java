@@ -10,7 +10,7 @@ public class BookService {
 
     private BookRepository bookRepository = new BookRepository();
 
-    public Book[] getAll(){
+    public Book[] getAll() {
         return bookRepository.getBooks();
     }
     public Book getByBookName(String name){
