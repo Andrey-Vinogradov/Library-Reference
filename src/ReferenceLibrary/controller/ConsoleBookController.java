@@ -11,6 +11,7 @@ public class ConsoleBookController {
         Book[] books = bookService.getAll();
         for (Book book : books) {
             System.out.println(book);
+            //System.out.println(book.getAuthor().getFullName());
         }
     }
 

@@ -10,6 +10,7 @@ public class BookService {
 
     private BookRepository bookRepository = new BookRepository();
 
+
     public Book[] getAll() {
         return bookRepository.getBooks();
     }
@@ -27,7 +28,7 @@ public class BookService {
         book.setAuthor(author);
     }
     public void create(String name, String genre, int yearRelease){
-        Book newBook = new Book(name, genre, yearRelease);
+        Book newBook = new Book(name, genre, yearRelease, null);
         Book[] newBooks = Arrays.copyOf(bookRepository.getBooks(), bookRepository.getBooks().length +1);
         newBooks[newBooks.length - 1] = newBook;
         bookRepository.setBooks(newBooks);
