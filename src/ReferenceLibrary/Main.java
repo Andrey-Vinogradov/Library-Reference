@@ -12,9 +12,10 @@ public class Main {
         String myName = in.nextLine();
         System.out.println("Hello " + myName + "!!!");
         System.out.println(myName + " enter the number. What do you want to do? ");
+        int num = 0;
 
-        //loop:for (; ;)        {
-            System.out.println("******************************|");
+        while (num != 4) {
+            System.out.println("|*****************************|");
             System.out.println("| 1. Show a list of books     |");
             System.out.println("| 2. Add book to library      |");
             System.out.println("| 3. Remove book from library |");
@@ -22,7 +23,7 @@ public class Main {
             System.out.println("|*****************************|");
             System.out.println();
             System.out.print(">- ");
-            int num = in.nextByte();
+            num = in.nextByte();
             if (num != 1 && num != 2 && num != 3 && num != 4) {
                 System.out.println("error");
             }
@@ -31,22 +32,23 @@ public class Main {
                 consoleBookController.getAll();
                 System.out.println();
             }
-            if (num == 2)
+            if (num == 2) {
                 in.nextLine(); //перевод курсора в начало строки
                 System.out.print("Please input name of book: ");
                 String bookName = in.nextLine();
                 System.out.print("Please input name of author: ");
                 String name = in.nextLine();
                 System.out.print("Please input surname of author: ");
-                String surname =in.nextLine();
+                String surname = in.nextLine();
                 System.out.print("Please year of birth of author: ");
                 int yearOfBirth = in.nextInt();
                 Author author = new Author(name, surname, yearOfBirth);
-                consoleBookController.addAuthorByBookName(bookName,author);
+                consoleBookController.addAuthorByBookName(bookName, author);
+                consoleBookController.getAll();
             }
         }
-
-
+    }
+}
 
 
        //   consoleBookController.getAll();

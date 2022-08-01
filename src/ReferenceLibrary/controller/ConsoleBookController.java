@@ -10,8 +10,9 @@ public class ConsoleBookController {
     public void getAll() {
         Book[] books = bookService.getAll();
         for (Book book : books) {
-            System.out.println(book);
-            //System.out.println(book.getAuthor().getFullName());
+            //System.out.println(book.indexOf(i));
+            System.out.print(book + "-");
+            System.out.println(book.getAuthor().getFullName());
         }
     }
 
