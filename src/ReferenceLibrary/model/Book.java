@@ -51,11 +51,6 @@ public class Book {
         if (author != null) {
            authorName = author.getFullName();
         }
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", genre='" + genre + '\'' +
-                ", yearRelease=" + yearRelease +
-                ", author=" + authorName +
-                '}';
+        return name + " - " + authorName;
     }
 }

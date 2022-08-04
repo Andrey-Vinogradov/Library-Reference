@@ -11,20 +11,21 @@ public class ConsoleBookController {
         Book[] books = bookService.getAll();
         for (Book book : books) {
             //System.out.println(book.indexOf(i));
-            System.out.print(book + "-");
-            System.out.println(book.getAuthor().getFullName());
+            System.out.println(book);
+            //System.out.println(book.getAuthor().getFullName());
         }
     }
 
 
-    public void create(String name, String genre, int yearRelease) {
-        bookService.create(name,genre,yearRelease);
+    public void createBook(String name, String genre, int yearRelease, Author author) {
+        bookService.createBook(name,genre,yearRelease, author);
         System.out.println("Book with name " + name + " was created");
     }
 
-    public void addAuthorByBookName(String bookName, Author author){
-        bookService.addAuthorByBookName(bookName, author);
-        System.out.println(String.format("Author [%s] was added to book [%s]", author.getName(), bookName));
+    public Author createAuthor(String nameAuthor, String surname, int getYearOfBirth){
+        Author author=bookService.createAuthor(nameAuthor, surname, getYearOfBirth);
+        return author;
+
     }
 
     public void getByBookName(String bookName){
